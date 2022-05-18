@@ -26,19 +26,19 @@ const addItem = () => {
   未完了
   <div v-for="item in items" :key="item.name">
     <div v-if="!item.isfinished">
-      <div class="item">
+      <label>
         <input v-model="item.isfinished" type="checkbox" />
         {{ item.name }} 期限：{{ item.limit }}
-      </div>
+      </label>
     </div>
   </div>
   完了
   <div v-for="item in items" :key="item.name">
     <div v-if="item.isfinished">
-      <div class="item">
+      <label>
         <input v-model="item.isfinished" type="checkbox" />
         {{ item.name }} 期限：{{ item.limit }}
-      </div>
+      </label>
     </div>
   </div>
 
